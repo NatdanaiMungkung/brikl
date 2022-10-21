@@ -50,7 +50,7 @@ function mergeResolversWithDirectivesAndSdl({
   ])
 }
 
-function makeSchema(options: CreateGqlServerOptions): GraphQLSchema {
+export function makeSchema(options: CreateGqlServerOptions): GraphQLSchema {
   let { typeDefs, resolvers } = options
 
   typeDefs = mergeTypeDefsWithDirectives(typeDefs)

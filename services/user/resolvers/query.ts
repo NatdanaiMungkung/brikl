@@ -7,4 +7,16 @@ export const query: Resolvers<Context>['Query'] = {
     ctx.prisma.user.findUnique({
       where: { id },
     }),
+  taskList: async (_parent, { userId }, ctx) => {
+    const taskLists = await ctx.prisma.taskList.findMany({
+      where: {
+        userId
+      }
+    })
+    return ctx.prisma.task.findMany({
+      where: {
+        taskListId: { in: taskLists.map(t=> t.id) }
+      }
+    })
+  }
 }
