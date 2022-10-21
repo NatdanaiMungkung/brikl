@@ -11,6 +11,11 @@ export const typeDefs = gql`
     tasks: [Task]
   }
 
+  enum Status {
+    DONE
+    PENDING
+  }
+
   type Task {
     id: ID!
     order: Int
@@ -30,7 +35,7 @@ export const typeDefs = gql`
   input UpdateTaskInput {
     order: Int!
     title: String!
-    status: String!
+    status: Status!
   }
 
   input CreateUserInput {

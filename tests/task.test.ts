@@ -127,7 +127,7 @@ describe('Test Queries/Mutations', () => {
             input: {
             title: '1',
             order: 1,
-            status: "done"
+            status: "DONE"
           }
         })
       })

@@ -27,7 +27,7 @@ export const mutation: Resolvers<Context>['Mutation'] = {
       }
     })
     return ctx.prisma.task.create({
-      data: {...input, status: "Pending", order: lastTask ? lastTask.order + 1 : 1}
+      data: {...input, status: "PENDING", order: lastTask ? lastTask.order + 1 : 1}
     })
   },
 
