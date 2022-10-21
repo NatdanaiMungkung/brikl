@@ -1,5 +1,12 @@
 # Brikl backend engineer assignment
 
+## Note from candidate
+- 1 query added `taskList(userId: ID!): [Task!]!`
+- 3 mutation added `createTaskList(input: CreateTaskListInput!): TaskList!` , `createTask(input: CreateTaskInput!): Task!`, `updateTask(id: ID!, input: UpdateTaskInput!): Task!`
+- `taskList` query will return task based on userId
+- run `pnpm test` to run test
+- I planned to add more test but unfortunately on weekend I'll be quite busy so I afraid I won't be able to submit on time
+
 ## Introducing the Alpha
 
 Alpha is the new startup company we are developing a cutting edge task management system with modern technology.

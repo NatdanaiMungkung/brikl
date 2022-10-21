@@ -1,5 +1,4 @@
 const chai = require('chai');
-import {taskList} from './mock/task'
 import { resolvers } from '../services/user/resolvers'
 import { typeDefs } from '../services/user/resolvers/schema'
 import { makeSchema } from '../libs/server'
